@@ -6,8 +6,8 @@ div.addEventListener("mousemove", () => {
 
 const grid = document.querySelector(".container");
 
-  for (let j = 0; j < 4; j++) {
-    for (let i = 0; i < 4; i++) {
+  for (let j = 0; j < 16; j++) {
+    for (let i = 0; i < 16; i++) {
     const divs = document.createElement("div");
     divs.classList.add("js");
     grid.appendChild(divs);

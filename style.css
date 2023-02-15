@@ -1,8 +1,9 @@
 .css,
  .js{
-    border: 2px solid black;
-    width: 40px;
-    height: 40px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    width: 58px;
+    height: 58px;
 }
 .css:hover {
   background-color: black;
@@ -12,9 +13,10 @@
 
 .container {
     display: flex;
-    /*border: 2px solid red;*/
-    width: 180px;
-    height: 170px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 960px;
+    height: 960px;
     flex-wrap: wrap;
     
     
