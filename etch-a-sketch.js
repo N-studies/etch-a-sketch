@@ -9,34 +9,33 @@ function createGrid(unitsPerSide) {
       grid.appendChild(divs);
     }
   }
-  
-    const alldiv = grid.querySelectorAll("div");
-    alldiv.forEach((div) => {
-      div.addEventListener("mousemove", () => {
-        div.setAttribute("style", `background-color: black; border: 1px solid black; height: ${squareSize}px; width: ${squareSize}px;`);
+
+  const alldiv = grid.querySelectorAll("div");
+  alldiv.forEach((div) => {
+    div.addEventListener("mousemove", () => {
+      div.setAttribute(
+        "style",
+        `background-color: black; border: 1px solid black; height: ${squareSize}px; width: ${squareSize}px;`
+      );
+    });
   });
-});
 }
 createGrid(16);
 
 function deleteGrid() {
   const grid = document.querySelector(".container");
-  while (grid.firstChild){
+  while (grid.firstChild) {
     grid.removeChild(grid.firstChild);
   }
 }
 
 function resetGrid(size) {
-  deleteGrid()
-  createGrid(size)
+  deleteGrid();
+  createGrid(size);
 }
 
 const btn = document.querySelector(".size");
 btn.addEventListener("click", () => {
   const units = prompt("How many squares per side?");
   resetGrid(units);
-})
-
-
-
-
+});
